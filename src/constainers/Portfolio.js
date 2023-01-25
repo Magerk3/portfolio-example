@@ -21,7 +21,7 @@ export const Portfolio = () => {
         setActiveArtworks(filteredArtworks);
     }, [selected])
     return (
-        <div>
+        <div className="container">
             <Toolbar
                 filters={filters}
                 selected={selected}
