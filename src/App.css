@@ -1,20 +1,31 @@
+
+
 .container {
    margin: 1.5em auto;
    width: 70%;
 }
+.filter-options {
+    width: 32%;
+    margin-right: 6%;
+   
+    
+}
 .img-row {
-    justify-content: center;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 .column {
-    flex: 30%;
-    max-width: 30%;
-    padding: 0.5em 0.1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 32%;
+    flex:32%;
+    
 }
 .column img {
     width: 100%;
-    margin-top:0.1em;
+    margin-top: 5%;
     
 }
 .filter {
@@ -25,9 +36,13 @@
     padding: 0.4em;
     font-family:monospace;
     font-weight:900;
+    
+    
+    
 }
 .selected-filter {
     background-color: #555555;
     color: #FFFFFF;
     padding: 0.3em;
 }
+

@@ -10,7 +10,7 @@ export const ProjectList = ({ activeArtworks }) => {
         if(i >= columnLength && i < 2*columnLength) column2.push(activeArtworks[i])
         if(i >= 2*columnLength) column3.push(activeArtworks[i])
     }
-    console.log(activeArtworks.length)
+   
     return (
         <div className="img-row">
             <div className="column">

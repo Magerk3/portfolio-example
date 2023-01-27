@@ -2,7 +2,7 @@ import { filter } from "mathjs";
 
 export const Toolbar = ({ filters, selected, onSelectFilter }) => {
     return (
-        <div>
+        <div className="filter-options">
             {filters.map((filter) => {
                 return selected === filter ? (
                     <button

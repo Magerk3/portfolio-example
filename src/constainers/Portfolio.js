@@ -5,21 +5,20 @@ import { artworks }  from "../data/artworks.js";
 import { ProjectList } from "../components/ProjectList";
 
 export const Portfolio = () => {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("All");
     const [activeArtworks, setActiveArtworks] = useState(artworks);
     const filters = ["All", "Websites", "Flayers", "Business Cards"];
 
     
     const  onSelectFilter = (e) => {
-        setSelected(e.target.value)
-    };
-    useEffect(() => {
         const filteredArtworks =
-            selected !== "All"
-                ? artworks.filter(artwork => artwork.category === selected)
+            e.target.value !== "All"
+                ? artworks.filter(artwork => artwork.category === e.target.value)
                 : artworks;
         setActiveArtworks(filteredArtworks);
-    }, [selected])
+        setSelected(e.target.value)
+    };
+    
     return (
         <div className="container">
             <Toolbar
